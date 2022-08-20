@@ -47,7 +47,7 @@ class BaseNumTuple:
         return type(self)(tuple((num * e for e in self.tuple)))
 
     def __str__(self):
-        return f'_Tuple ({(", ").join((str(e) for e in self.tuple))})'
+        return f'BaseNumTuple ({(", ").join((str(e) for e in self.tuple))})'
 
     def __sub__(self, other):
         "Return type is `type(self)`"
