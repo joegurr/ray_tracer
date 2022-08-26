@@ -1,4 +1,3 @@
-from lib2to3.pytree import Base
 from num_tuples.base_num_tuple import BaseNumTuple
 
 
