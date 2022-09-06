@@ -1,4 +1,4 @@
-from math import sqrt
+from math import isclose, sqrt
 from numbers import Number
 
 
@@ -21,7 +21,7 @@ class BaseNumTuple:
             return False
 
         for i in range(len(self)):
-            if self.tuple[i] != other.tuple[i]:
+            if not isclose(self.tuple[i], other.tuple[i], abs_tol=1e-5):
                 return False
         return True
 
