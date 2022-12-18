@@ -110,7 +110,12 @@ class SquareMatrix:
         return determinant
 
     @staticmethod
-    def identity(n):
+    def identity(n=4):
+        """
+        Our Point and Vector classes are 4 dimensional
+        (3 dimensions for space, and one to indicate whether it is a point or a vector)
+        For matrix multiplication to work we need our square matrices to be 4*4
+        """
         xss = []
         for i in range(n):
             xs = n * [0]
