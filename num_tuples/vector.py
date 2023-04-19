@@ -11,9 +11,6 @@ class Vector(BaseNumTuple):
     def __abs__(self):
         return sqrt(sum(e**2 for e in self.tuple[:-1]))
 
-    def __repr__(self):
-        return self.__str__()
-
     def __str__(self):
         return f'Vector <{(", ").join((str(e) for e in self.tuple[:-1]))}>'
 

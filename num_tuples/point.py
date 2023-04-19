@@ -8,9 +8,6 @@ class Point(BaseNumTuple):
             xs = xs[:-1]
         BaseNumTuple.__init__(self, xs + (1,))
 
-    def __repr__(self):
-        return self.__str__()
-
     def __str__(self):
         return f'Point ({(", ").join((str(e) for e in self.tuple[:-1]))})'
 

@@ -156,20 +156,3 @@ class SquareMatrix:
                 xs.append(self[j][i])
             xss.append(xs)
         return SquareMatrix(xss)
-
-
-if __name__ == "__main__":
-    m1 = SquareMatrix(
-        [
-            [1, 2, 3, 4],
-            [5.5, 6.5, 7.5, 8.5],
-            [9, 10, 11, 12],
-            [13.5, 14.5, 15.5, 16.5],
-        ]
-    )
-
-    m2 = SquareMatrix([[-2, 1, 2, 3], [3, 2, 1, -1], [4, 3, 6, 5], [1, 2, 7, 8]])
-
-    t = BaseNumTuple((1, 4, 5, 6))
-
-    breakpoint()

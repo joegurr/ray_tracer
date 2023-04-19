@@ -16,9 +16,6 @@ class Canvas:
     def __getitem__(self, i):
         return self.canvas[i]
 
-    def __repr__(self):
-        return self.__str__()
-
     def __str__(self):
         return f"Canvas {self.width}x{self.height}"
 

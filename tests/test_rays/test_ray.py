@@ -2,7 +2,7 @@ import unittest
 
 from num_tuples.point import Point
 from num_tuples.vector import Vector
-from rays.ray import Ray, position
+from rays.ray import Ray
 from matrices.transformations import translation, scaling
 
 
@@ -16,10 +16,10 @@ class TestRayClass(unittest.TestCase):
 
     def test_computing_a_point_from_a_distance(self):
         r = Ray(Point((2, 3, 4)), Vector((1, 0, 0)))
-        self.assertEqual(position(r, 0), Point((2, 3, 4)))
-        self.assertEqual(position(r, 1), Point((3, 3, 4)))
-        self.assertEqual(position(r, -1), Point((1, 3, 4)))
-        self.assertEqual(position(r, 2.5), Point((4.5, 3, 4)))
+        self.assertEqual(r.position(0), Point((2, 3, 4)))
+        self.assertEqual(r.position(1), Point((3, 3, 4)))
+        self.assertEqual(r.position(-1), Point((1, 3, 4)))
+        self.assertEqual(r.position(2.5), Point((4.5, 3, 4)))
 
     def test_translating_a_ray(self):
         r1 = Ray(Point((1, 2, 3)), Vector((0, 1, 0)))

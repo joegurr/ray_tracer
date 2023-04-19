@@ -16,7 +16,7 @@ class TestIntersectionClasses(unittest.TestCase):
         i1 = Intersection(1, s)
         i2 = Intersection(2, s)
         xs = Intersections([i1, i2])
-        self.assertEqual(xs.count(), 2)
+        self.assertEqual(xs.count, 2)
         self.assertEqual(xs[0].t, 1)
         self.assertEqual(xs[1].t, 2)
 

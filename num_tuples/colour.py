@@ -7,9 +7,6 @@ class Colour(BaseNumTuple):
             raise Exception("Colours only have three inputs")
         BaseNumTuple.__init__(self, xs)
 
-    def __repr__(self):
-        return self.__str__()
-
     def __str__(self):
         return f'Colour ({(", ").join((str(e) for e in self.tuple))})'
 
