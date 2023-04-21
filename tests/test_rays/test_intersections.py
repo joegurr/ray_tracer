@@ -49,3 +49,7 @@ class TestIntersectionClasses(unittest.TestCase):
         i4 = Intersection(2, s)
         xs = Intersections([i1, i2, i3, i4])
         self.assertEqual(xs.hit(), i4)
+
+
+if __name__ == "__main__":
+    unittest.main()

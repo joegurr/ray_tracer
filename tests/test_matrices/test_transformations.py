@@ -147,3 +147,7 @@ class TestMatrixTransformations(unittest.TestCase):
         T = C @ B @ A
         p2 = Point((15, 0, 7))
         self.assertEqual(T * p1, p2)
+
+
+if __name__ == "__main__":
+    unittest.main()

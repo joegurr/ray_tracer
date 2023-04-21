@@ -57,6 +57,20 @@ class TestVectorClass(unittest.TestCase):
         self.assertEqual(v1.cross(v2), v12)
         self.assertEqual(v2.cross(v1), -v12)
 
+    def test_reflecting_a_vector_approaching_at_45_degrees(self):
+        v = Vector((1, -1, 0))
+        n = Vector((0, 1, 0))
+        r1 = v.reflect(n)
+        r2 = Vector((1, 1, 0))
+        self.assertEqual(r1, r2)
+
+    def test_reflecting_a_vector_off_a_slanted_surface(self):
+        v = Vector((0, -1, 0))
+        n = Vector((sqrt(2) / 2, sqrt(2) / 2, 0))
+        r1 = v.reflect(n)
+        r2 = Vector((1, 0, 0))
+        self.assertEqual(r1, r2)
+
 
 if __name__ == "__main__":
     unittest.main()

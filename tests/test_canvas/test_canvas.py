@@ -65,3 +65,7 @@ class TestCanvasClass(unittest.TestCase):
             line = f.readlines()[-1]
         self.assertEqual(line[-1], "\n")
         os.remove(filename)
+
+
+if __name__ == "__main__":
+    unittest.main()

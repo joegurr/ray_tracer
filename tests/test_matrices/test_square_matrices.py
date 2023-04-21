@@ -185,3 +185,7 @@ class TestSquareMatrixClass(unittest.TestCase):
         b = SquareMatrix([[8, 2, 2, 2], [3, -1, 7, 0], [7, 0, 5, 4], [6, -2, 0, 5]])
         c = a @ b
         self.assertEqual(c @ b.inverse(), a)
+
+
+if __name__ == "__main__":
+    unittest.main()

@@ -38,3 +38,7 @@ class TestColourClass(unittest.TestCase):
 
         self.assertEqual(c1 * c2, c3)
         self.assertTrue(isinstance(c1 * c2, Colour))
+
+
+if __name__ == "__main__":
+    unittest.main()

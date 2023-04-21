@@ -34,3 +34,7 @@ class TestRayClass(unittest.TestCase):
         r2 = r1.transform(m)
         self.assertEqual(r2.origin, Point((2, 6, 12)))
         self.assertEqual(r2.direction, Vector((0, 3, 0)))
+
+
+if __name__ == "__main__":
+    unittest.main()

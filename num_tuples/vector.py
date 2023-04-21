@@ -29,5 +29,7 @@ class Vector(BaseNumTuple):
         return sum(n * m for m, n in zip(self.tuple[:-1], other.tuple[:-1]))
 
     def normalise(self):
-        "Returns a unit vector"
         return self.__truediv__(abs(self))
+
+    def reflect(self, normal):
+        return self - 2 * self.dot(normal) * normal
