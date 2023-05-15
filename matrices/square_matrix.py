@@ -1,3 +1,4 @@
+from functools import cache
 from numbers import Number
 from math import isclose
 
@@ -35,6 +36,12 @@ class SquareMatrix:
             raise IndexError()
         return self.matrix[arg]
 
+    def __hash__(self):
+        h = 1
+        for xs in self.matrix:
+            h *= hash(tuple(xs))
+        return h
+
     def __len__(self):
         return len(self.matrix)
 
@@ -65,9 +72,6 @@ class SquareMatrix:
         xss = []
         for xs in self.matrix:
             xss.append([-e for e in xs])
-
-    def __repr__(self):
-        return self.__str__()
 
     def __rmul__(self, factor):
         """
@@ -123,6 +127,7 @@ class SquareMatrix:
             xss.append(xs)
         return SquareMatrix(xss)
 
+    @cache
     def inverse(self):
         if not self.invertible():
             return None

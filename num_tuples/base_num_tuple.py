@@ -37,9 +37,6 @@ class BaseNumTuple:
         "Return type is `type(self)`"
         return type(self)(tuple((-e for e in self.tuple)))
 
-    def __repr__(self):
-        return self.__str__()
-
     def __rmul__(self, num):
         "Return type is `type(self)`"
         if not isinstance(num, Number):

@@ -27,7 +27,11 @@ class Intersections:
 
     def hit(self):
         ys = sorted(self.intersections, key=lambda x: (x.t <= 0, x.t))
-        return ys[0] if ys[0].t > 0 else None
+        if ys:
+            h = ys[0] if ys[0].t > 0 else None
+        else:
+            h = None
+        return h
 
     def ts(self):
         return tuple(x.t for x in self.intersections)
